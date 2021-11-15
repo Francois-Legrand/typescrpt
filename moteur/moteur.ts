@@ -1,10 +1,11 @@
 export abstract class Moteur {
     private vitesse_ : number;
     private kilometrage_ : number;
-
-    constructor(vitesse : number, kilometrage : number){
+    private nom_ : string;
+    constructor(vitesse : number, kilometrage : number, nom : string){
         this.kilometrage_ = kilometrage;
         this.vitesse_ = vitesse;
+        this.nom_ = nom;
     }
 
     get vitesse(){
@@ -20,5 +21,11 @@ export abstract class Moteur {
         this.kilometrage_ = kilometrage;
     }
     abstract demarrer() : void;
-    
+
+    get nom(){
+        return this.nom_;
+    }
+    set nom(nom : string){
+        this.nom_ = nom;
+    }
 }

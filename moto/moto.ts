@@ -15,8 +15,5 @@ export class Moto extends Vehicule{
     set nbRoue(nbRoue : number){
         this.nbRoue = nbRoue;
     }
-    faireLePlein(){
-        console.log("le plein est fait");
-    }
    
 }

@@ -9,6 +9,12 @@ var Vehicule = /** @class */ (function () {
         this.moteur_ = moteur;
         this.reservoir_ = reservoir;
     }
+    Vehicule.prototype.faireLePlein = function (s) {
+        console.log(s.prixElectrique);
+        if (this.moteur.nom === "moteurEssence") {
+            console.log("le pleins est fait " + s.prixEssence);
+        }
+    };
     Object.defineProperty(Vehicule.prototype, "marque", {
         get: function () {
             return this.marque_;

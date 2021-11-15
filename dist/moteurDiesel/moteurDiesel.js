@@ -19,21 +19,9 @@ exports.moteurDiesel = void 0;
 var moteur_1 = require("../moteur/moteur");
 var moteurDiesel = /** @class */ (function (_super) {
     __extends(moteurDiesel, _super);
-    function moteurDiesel(nom, vitesse, kilometrage) {
-        var _this = _super.call(this, vitesse, kilometrage) || this;
-        _this.nom_ = nom;
-        return _this;
+    function moteurDiesel(vitesse, kilometrage, nom) {
+        return _super.call(this, vitesse, kilometrage, nom) || this;
     }
-    Object.defineProperty(moteurDiesel.prototype, "nom", {
-        get: function () {
-            return this.nom_;
-        },
-        set: function (nom) {
-            this.nom_ = nom;
-        },
-        enumerable: false,
-        configurable: true
-    });
     moteurDiesel.prototype.demarrer = function () {
         console.log("ploumploumploum...");
     };

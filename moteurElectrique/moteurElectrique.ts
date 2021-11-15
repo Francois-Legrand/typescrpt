@@ -1,19 +1,11 @@
 import { Moteur } from "../moteur/moteur";
 
 export class MoteurElectrique extends Moteur{
-    private nom_ : string;
 
-    constructor(nom : string, vitesse : number, kilometrage : number){
-        super(vitesse, kilometrage);
-        this.nom_ = nom;
+    constructor(vitesse : number, kilometrage : number, nom : string){
+        super(vitesse, kilometrage, nom);
     }
 
-    get nom(){
-        return this.nom_;
-    }
-    set nom(nom : string){
-        this.nom_ = nom;
-    }
     demarrer(){
         console.log("fffffffff...");
      };

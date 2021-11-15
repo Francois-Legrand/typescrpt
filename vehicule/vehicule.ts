@@ -18,8 +18,10 @@ export abstract class Vehicule{
         this.reservoir_ = reservoir;
     }
     faireLePlein(s : StationDeRavitaillement){
+        if(this.moteur.nom === "moteurEssence"){
+            console.log(`le pleins est fait cela vous a couté ${s.prixEssence}$`);
+        }
         
-        console.log("le pleins est fait");
     }
 
     get marque(){

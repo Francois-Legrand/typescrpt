@@ -19,21 +19,9 @@ exports.MoteurElectrique = void 0;
 var moteur_1 = require("../moteur/moteur");
 var MoteurElectrique = /** @class */ (function (_super) {
     __extends(MoteurElectrique, _super);
-    function MoteurElectrique(nom, vitesse, kilometrage) {
-        var _this = _super.call(this, vitesse, kilometrage) || this;
-        _this.nom_ = nom;
-        return _this;
+    function MoteurElectrique(vitesse, kilometrage, nom) {
+        return _super.call(this, vitesse, kilometrage, nom) || this;
     }
-    Object.defineProperty(MoteurElectrique.prototype, "nom", {
-        get: function () {
-            return this.nom_;
-        },
-        set: function (nom) {
-            this.nom_ = nom;
-        },
-        enumerable: false,
-        configurable: true
-    });
     MoteurElectrique.prototype.demarrer = function () {
         console.log("fffffffff...");
     };
