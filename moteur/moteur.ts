@@ -19,4 +19,6 @@ export abstract class Moteur {
     set kilometrage(kilometrage : number){
         this.kilometrage_ = kilometrage;
     }
+    abstract demarrer() : void;
+    
 }

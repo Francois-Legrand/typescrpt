@@ -14,4 +14,7 @@ export class moteurDiesel extends Moteur{
     set nom(nom : string){
         this.nom_ = nom;
     }
+    demarrer(){
+       console.log("ploumploumploum...");
+    };
 }

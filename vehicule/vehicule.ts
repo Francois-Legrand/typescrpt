@@ -1,16 +1,25 @@
 import { Moteur } from "../moteur/moteur";
+import { MoteurElectrique } from "../moteurElectrique/moteurElectrique";
+import { Moto } from "../moto/moto";
+import { StationDeRavitaillement } from "../stationDeRavitaillement/stationDeRavitaillement";
 
-export class Vehicule{
+export abstract class Vehicule{
     private marque_ : string;
     private couleur_ : string;
     private prix_ : number;
     private moteur_ : Moteur;
+    private reservoir_ : number;
 
-    constructor(marque : string, couleur : string, prix : number, moteur : Moteur){
+    constructor(reservoir : number, marque : string, couleur : string, prix : number, moteur : Moteur){
         this.marque_ = marque;
         this.couleur_ = couleur;
         this.prix_ = prix;
         this.moteur_ = moteur;
+        this.reservoir_ = reservoir;
+    }
+    faireLePlein(s : StationDeRavitaillement){
+        
+        console.log("le pleins est fait");
     }
 
     get marque(){
@@ -36,5 +45,11 @@ export class Vehicule{
     }
     set moteur(moteur : Moteur){
         this.moteur_ = moteur;
+    }
+    get reservoir(){
+        return this.reservoir_;
+    }
+    set reservoir(reservoir : number){
+        this.reservoir = reservoir;
     }
 }
